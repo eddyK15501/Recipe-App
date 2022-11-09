@@ -16,10 +16,11 @@ const App = () => {
       `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${process.env.REACT_APP_ID}&app_key=${process.env.REACT_APP_KEY}`
     );
 
+
     const data = await response.json();
 
     setRecipes(data.hits);
-    console.log(data.hits);
+    console.log(data);
   };
 
   const handleSearch = (event) => {
